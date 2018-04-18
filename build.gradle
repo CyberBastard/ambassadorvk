@@ -1,0 +1,62 @@
+
+
+version = 1.0
+
+buildscript {
+    ext.kotlin_version = '1.2.31'
+    ext.junitPlatformVersion = '1.1.1'
+    ext.junitJupiterVersion  = '5.1.1'
+    ext.assertj_version = '3.8.0'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.1.1'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+dependencies {
+    compile group: 'org.telegram', name: 'telegrambots', version: '3.5'
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.3.2'
+    compile group: 'com.vk.api', name: 'sdk', version: '0.5.12'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.9-rc'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect"
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'
+    compile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    compile('org.mockito:mockito-inline:2.+')
+
+    testCompile group: 'org.jetbrains.kotlin', name: 'kotlin-test-junit', version: "$kotlin_version"
+    testCompile group: 'org.assertj', name: 'assertj-core', version: "$assertj_version"
+
+    testCompile("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+    testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    testCompile 'com.nhaarman:mockito-kotlin:1.5.0'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'org.objenesis:objenesis:2.2'
+    testCompile 'cglib:cglib-nodep:3.2.0'
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.5'
+
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.2.31-release-95 (1.2.31)"
+}
