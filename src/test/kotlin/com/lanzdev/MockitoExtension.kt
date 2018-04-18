@@ -12,7 +12,7 @@ import java.lang.reflect.Parameter
 
 /**
  * `com.lanzdev.core.MockitoExtension` showcases the [TestInstancePostProcessor]
- * and [ParameterResolver] extension APIs of JUnit 5 by providing
+ * and [ParameterResolver] ext APIs of JUnit 5 by providing
  * dependency injection support at the field level and at the method parameter
  * level via Mockito 2.x's [@Mock][Mock] annotation.
  *
