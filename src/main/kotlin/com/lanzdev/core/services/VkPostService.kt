@@ -1,3 +1,5 @@
+@file:JvmName("VkPostService")
+
 package com.lanzdev.core.services
 
 import com.vk.api.sdk.objects.wall.WallPostFull

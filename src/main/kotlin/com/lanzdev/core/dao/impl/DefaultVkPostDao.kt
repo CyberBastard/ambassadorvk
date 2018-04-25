@@ -1,3 +1,5 @@
+@file:JvmName("DefaultVkPostDao")
+
 package com.lanzdev.core.dao.impl
 
 import com.lanzdev.contexts.VkContext

@@ -1,6 +1,8 @@
+@file:JvmName("PhotoAttachmentData")
+
 package com.lanzdev.core.data
 
-import com.lanzdev.core.WallpostAttachmentType
+import com.lanzdev.core.CustomWallpostAttachmentType
 
 class PhotoAttachmentData (
         id: Int = -1,
@@ -12,7 +14,7 @@ class PhotoAttachmentData (
         var photo2560: String = "",
         var text: String = "",
         var date: Int = -1
-) : AttachmentData(id, WallpostAttachmentType.PHOTO) {
+) : AttachmentData(id, CustomWallpostAttachmentType.PHOTO) {
     override fun toString(): String {
         return """
 id: $id

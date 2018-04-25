@@ -1,10 +1,12 @@
+@file:JvmName("WallPostData")
+
 package com.lanzdev.core.data
 
 import com.vk.api.sdk.objects.wall.PostType
 
 data class WallPostData(
-        val id: String,
-        val postType: PostType,
-        val text: String,
-        val attachments: List<AttachmentData>
+        var id: Int = -1,
+        var postType: PostType = PostType.POST,
+        var text: String = "",
+        var attachments: MutableList<AttachmentData> = mutableListOf()
 )

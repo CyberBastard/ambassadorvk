@@ -1,3 +1,5 @@
+@file:JvmName("StringValidator")
+
 package com.lanzdev.core.validators
 
 class StringValidator {

@@ -1,3 +1,5 @@
+@file:JvmName("NumberValidator")
+
 package com.lanzdev.core.validators
 
 class NumberValidator {

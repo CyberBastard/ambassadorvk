@@ -1,3 +1,5 @@
+@file:JvmName("VkContext")
+
 package com.lanzdev.contexts
 
 import com.vk.api.sdk.client.VkApiClient

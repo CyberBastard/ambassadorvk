@@ -30,7 +30,7 @@ internal class DefaultVkPostServiceTest {
 
     @BeforeEach
     fun `set up mocks`() {
-        reset(stringValidator, numberValidator, dao)
+        reset(stringValidator, numberValidator, dao, wallPostFull)
 
         doNothing().whenever(stringValidator).validateEmptiness(any(), any())
         doNothing().whenever(numberValidator).validateInRange(any(), any(), any(), any())
@@ -59,7 +59,7 @@ internal class DefaultVkPostServiceTest {
         @Test
         fun `should call validate emptiness`() {
             service.selectItems(screenName, limit)
-            verify(stringValidator).validateEmptiness(`eq`(screenName), anyString())
+            verify(stringValidator).validateEmptiness(eq(screenName), anyString())
         }
 
         @Test

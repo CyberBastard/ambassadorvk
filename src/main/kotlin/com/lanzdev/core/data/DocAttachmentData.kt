@@ -1,6 +1,8 @@
+@file:JvmName("DocAttachmentData")
+
 package com.lanzdev.core.data
 
-import com.lanzdev.core.WallpostAttachmentType
+import com.lanzdev.core.CustomWallpostAttachmentType
 
 class DocAttachmentData(
         id: Int = -1,
@@ -8,4 +10,4 @@ class DocAttachmentData(
         var size: Int = -1,
         var ext: String = "",
         var url: String = ""
-) : AttachmentData(id, WallpostAttachmentType.DOC)
+) : AttachmentData(id, CustomWallpostAttachmentType.DOC)

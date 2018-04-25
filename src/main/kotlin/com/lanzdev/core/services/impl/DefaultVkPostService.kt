@@ -1,3 +1,5 @@
+@file:JvmName("DefaultVkPostService")
+
 package com.lanzdev.core.services.impl
 
 import com.lanzdev.core.dao.VkPostDao

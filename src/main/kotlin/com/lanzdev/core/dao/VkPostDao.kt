@@ -1,3 +1,5 @@
+@file:JvmName("VkPostDao")
+
 package com.lanzdev.core.dao
 
 import com.vk.api.sdk.objects.wall.WallPostFull
