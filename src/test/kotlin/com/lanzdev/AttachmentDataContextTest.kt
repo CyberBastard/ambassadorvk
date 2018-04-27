@@ -26,7 +26,10 @@ internal class AttachmentDataContextTest {
             CustomWallpostAttachmentType.DOC.value to docAttachmentConverter,
             CustomWallpostAttachmentType.PHOTO.value to photoAttachmentConverter
     )
-    private val context = AttachmentDataContext(converters)
+
+    private val context = AttachmentDataContext().also {
+        it.converters = converters
+    }
 
     @BeforeEach
     fun `set up`() {

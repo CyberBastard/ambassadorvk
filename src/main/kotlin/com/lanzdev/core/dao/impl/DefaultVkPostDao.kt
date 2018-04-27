@@ -6,7 +6,9 @@ import com.lanzdev.contexts.VkContext
 import com.lanzdev.core.dao.VkPostDao
 import com.vk.api.sdk.objects.wall.WallPostFull
 import com.vk.api.sdk.queries.wall.WallGetFilter
+import org.springframework.stereotype.Component
 
+@Component
 class DefaultVkPostDao(private val vkContext: VkContext) : VkPostDao {
 
     override fun selectLast(screenName: String): WallPostFull {

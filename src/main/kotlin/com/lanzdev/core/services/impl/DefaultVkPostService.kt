@@ -7,12 +7,14 @@ import com.lanzdev.core.services.VkPostService
 import com.lanzdev.core.validators.NumberValidator
 import com.lanzdev.core.validators.StringValidator
 import com.vk.api.sdk.objects.wall.WallPostFull
+import org.springframework.stereotype.Component
 
-class DefaultVkPostService : VkPostService {
-
-    lateinit var vkPostDao: VkPostDao
-    lateinit var stringValidator: StringValidator
-    lateinit var numberValidator: NumberValidator
+@Component
+class DefaultVkPostService(
+        private val vkPostDao: VkPostDao,
+        private val stringValidator: StringValidator,
+        private val numberValidator: NumberValidator
+) : VkPostService {
 
     override fun selectLast(screenName: String): WallPostFull {
         stringValidator.validateEmptiness(screenName, DefaultVkPostService::selectLast.parameters[1].name!!)

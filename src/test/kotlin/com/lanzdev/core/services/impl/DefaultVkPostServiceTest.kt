@@ -26,7 +26,7 @@ internal class DefaultVkPostServiceTest {
     private val wallPostFull: WallPostFull = mock()
 
     @InjectMocks
-    private val service = DefaultVkPostService()
+    private lateinit var service: DefaultVkPostService
 
     @BeforeEach
     fun `set up mocks`() {

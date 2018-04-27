@@ -7,6 +7,7 @@ buildscript {
     ext.junitPlatformVersion = '1.1.1'
     ext.junitJupiterVersion  = '5.1.1'
     ext.assertj_version = '3.8.0'
+    ext.spring_version = '5.0.5'
 
     repositories {
         mavenCentral()
@@ -35,6 +36,10 @@ dependencies {
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.9-rc'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
+    compile "org.springframework:spring-core:${spring_version}.RELEASE"
+    compile "org.springframework:spring-beans:${spring_version}.RELEASE"
+    compile "org.springframework:spring-context:${spring_version}.RELEASE"
+    compile group: 'org.springframework.javaconfig', name: 'spring-javaconfig', version: '1.0.0.m3'
 
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

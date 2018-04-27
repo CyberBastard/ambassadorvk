@@ -5,10 +5,12 @@ package com.lanzdev.core.facades.vkpost.converters.impl
 import com.lanzdev.core.data.DocAttachmentData
 import com.lanzdev.core.facades.vkpost.converters.AttachmentConverter
 import com.vk.api.sdk.objects.wall.WallpostAttachment
+import org.springframework.stereotype.Component
 
+@Component
 class DocAttachmentConverter : AttachmentConverter<DocAttachmentData> {
 
-    override fun convert(source: WallpostAttachment) = DocAttachmentData().also {data ->
+    override fun convert(source: WallpostAttachment) = DocAttachmentData().also { data ->
         with(data) {
             source.doc.id?.let { data.id = it }
             source.doc.title?.let { data.title = it }

@@ -2,7 +2,6 @@ package com.lanzdev.core.facades.vkpost.converters.impl
 
 import com.lanzdev.MockitoExtension
 import com.lanzdev.core.data.PhotoAttachmentData
-import com.lanzdev.core.facades.vkpost.converters.impl.PhotoAttachmentConverter
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.reset
 import com.nhaarman.mockito_kotlin.whenever

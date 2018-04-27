@@ -45,7 +45,7 @@ internal class DefaultVkPostFacadeTest {
     private val docAttachmentConverter: DocAttachmentConverter = mock()
 
     @InjectMocks
-    private val facade = DefaultVkPostFacade()
+    private lateinit var facade: DefaultVkPostFacade
 
     @BeforeEach
     fun `set up mocks`() {

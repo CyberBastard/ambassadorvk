@@ -2,6 +2,9 @@
 
 package com.lanzdev.core.validators
 
+import org.springframework.stereotype.Component
+
+@Component
 class NumberValidator {
 
     fun validateInRange(input: Int, minValue: Int, maxValue: Int, fieldName: String) {
